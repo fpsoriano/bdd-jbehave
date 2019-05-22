@@ -32,7 +32,7 @@ public class ApiClient {
     this.environment = bddContext.getEnvironment();
   }
 
-  public <T> T invoke(Class<T> returnType, Map<String, String> headerParams, String method, String path, Map<String, String> queryParams, Object body) {
+  public <T> T invoke(Class<T> returnType, Map<String, String> headerParams, String method, String path, Map<String, String> queryParams, Object body) throws ApiException{
     WebTarget target = buildWebTarget(path, queryParams);
     Response response = buildResponse(target, method, body, headerParams);
 

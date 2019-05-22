@@ -1,4 +1,6 @@
 
+OBS: java 8
+
 ### Running the service
 
 1- Build app-service

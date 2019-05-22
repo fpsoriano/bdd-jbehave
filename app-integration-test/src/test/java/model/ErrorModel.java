@@ -7,6 +7,8 @@ import lombok.Data;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class ErrorModel {
 
+  public ErrorModel(){}
+
   private String code;
   private String message;
 

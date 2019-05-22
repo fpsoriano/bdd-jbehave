@@ -1,5 +1,6 @@
 package client;
 
+import exception.ApiException;
 import model.AppModel;
 
 import java.util.Map;
@@ -15,7 +16,7 @@ public class AppsAPI {
   }
 
 
-  public AppModel createApp(AppModel app) {
+  public AppModel createApp(AppModel app) throws ApiException {
     String path = APPS_PATH;
     return apiClient.invoke(AppModel.class, null, "POST", path, null, app);
   }

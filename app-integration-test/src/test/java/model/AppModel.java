@@ -9,6 +9,8 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class AppModel {
 
+  public AppModel(){}
+
   private String appId;
 
   private String name;

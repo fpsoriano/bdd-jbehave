@@ -8,7 +8,7 @@ import org.springframework.util.StringUtils;
 
 public class AppValidation {
 
-  public static void appValidation(AppModel appModel){
+  public static void appCreateValidation(AppModel appModel){
 
     if (StringUtils.isEmpty(appModel.getAppId())) {
       throw new InvalidAppCreateException(AppErrorCode.VALIDATION_ERROR_CREATE_APP,
@@ -25,4 +25,5 @@ public class AppValidation {
           String.format(ErrorMessages.REQUIRED_ATTRIBUTE, "description"));
     }
   }
+
 }
